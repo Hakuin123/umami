@@ -184,6 +184,7 @@ export default {
     outputFileTracingIncludes: {
       '/**': ['./certs/**'],
     },
+  },
   async headers() {
     return headers;
   },
