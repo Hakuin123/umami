@@ -180,8 +180,11 @@ export default {
   typescript: {
     ignoreBuildErrors: true,
   },
+  outputFileTracingIncludes: {
+    '/**': ['./certs/**'],
+  },
   async headers() {
-    return headers;
+    return headers
   },
   async rewrites() {
     return [
@@ -194,9 +197,9 @@ export default {
         source: '/teams/:teamId/:path*',
         destination: '/:path*',
       },
-    ];
+    ]
   },
   async redirects() {
-    return [...redirects];
+    return [...redirects]
   },
-};
+}
