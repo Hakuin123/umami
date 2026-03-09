@@ -180,10 +180,8 @@ export default {
   typescript: {
     ignoreBuildErrors: true,
   },
-  experimental: {
-    outputFileTracingIncludes: {
-      '/**': ['./certs/**'],
-    },
+  outputFileTracingIncludes: {
+    '/**': ['./certs/**'],
   },
   async headers() {
     return headers;
