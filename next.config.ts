@@ -202,8 +202,11 @@ export default withNextIntl({
     ignoreBuildErrors: true,
   },
   devIndicators: false,
+  outputFileTracingIncludes: {
+    '/**': ['./certs/**'],
+  },
   async headers() {
-    return headers;
+    return headers
   },
   async rewrites() {
     return [
@@ -216,9 +219,9 @@ export default withNextIntl({
         source: '/teams/:teamId/:path*',
         destination: '/:path*',
       },
-    ];
+    ]
   },
   async redirects() {
-    return [...redirects];
+    return [...redirects]
   },
 });
